@@ -1,0 +1,28 @@
+<section layout="row" layout-align="center start">
+	<form flex-gt-md="33" flex-md="50" flex-sm="75" flex-xs="100" [ngFormModel]="userForm" (ngSubmit)="onSignin()">
+		<h2>{{ title }}</h2>
+
+		<md-input-container class="md-block">
+			<label for="email">Email</label>
+			<input md-input [ngFormControl]="userForm.find('email')" type="email" id="email" [(value)]="userModel.email">
+			<div md-messages="email" role="alert">
+				<div md-message>Your email is invalid.</div>
+			</div>
+		</md-input-container>
+
+		<md-input-container class="md-block">
+			<label for="password">Password</label>
+			<input md-input [ngFormControl]="userForm.find('password')" type="password" id="password"
+			       [(value)]="userModel.password">
+			<div md-messages="password" role="alert">
+				<div md-message>Your password must be between 5 and 12 chars.</div>
+			</div>
+			<div role="alert">
+				<div class="error md-message">{{ error }}</div>
+			</div>
+		</md-input-container>
+
+
+		<button md-raised-button [disabled]="!userForm.valid" class="md-raised md-primary">Sign In</button>
+	</form>
+</section>

@@ -1,0 +1,56 @@
+<md-card>
+	<md-card-title>
+		<md-card-title-text layout-padding>
+			<input type="text" class="md-headline" [(ngModel)]="movie && movie.title">
+			<ul class="list-unstyled list-inline">
+				<li class="md-caption list-inline-item">{{ movie?.runtime }} min <span class="delimiter">|</span></li>
+				<li class="list-inline-item">
+					<ul class="list-unstyled list-inline">
+						<li class="md-caption list-inline-item" *ngFor="#genre of movie?.genres; #last = last">
+							{{ genre }}<span *ngIf="!last">,</span> <span *ngIf="last" class="delimiter">|</span>
+						</li>
+					</ul>
+				</li>
+				<li class="list-inline-item">
+					<ul class="list-unstyled list-inline">
+						<li class="list-inline-item md-caption" *ngFor="#country of movie?.countries; #last = last">
+							{{ country }}<span *ngIf="!last">,</span> <span *ngIf="last" class="delimiter">|</span>
+						</li>
+					</ul>
+				</li>
+				<li class="list-inline-item md-caption">{{ movie?.year }}</li>
+			</ul>
+			<ul class="list-unstyled list-inline">
+				<li class="list-inline-item md-caption" *ngFor="#actor of movie?.actors; #last = last">
+					{{ actor }}<span *ngIf="!last">,</span>
+				</li>
+			</ul>
+			<div layout="column">
+				<span class="md-caption edit-field">Plot:</span>
+				<textarea class="md-body-1" [(ngModel)]="movie && movie.plot"></textarea>
+			</div>
+			<div layout="column" class="edit-field">
+				<span class="md-caption">Critics Consensus:</span>
+				<span class="md-body-1">{{ movie?.tomato?.consensus || 'There is no concensus for this movie' }}</span>
+			</div>
+			<div class="rating">
+				<p class="md-caption">Rating:</p>
+				<div layout="row" layout-align="start center">
+					<p class="rating__image {{ movie?.tomato?.image || 'rotten' }}"></p>
+					<p class="rating__score">{{ movie?.tomato?.userMeter || 0 }} %</p>
+				</div>
+				<p class="rating__details md-caption">
+					<span>Average Rating:</span> {{ movie?.tomato?.rating || 0 }} |
+					<span>Reviews Counted:</span> {{ movie?.tomato?.reviews || 0 }}
+				</p>
+			</div>
+		</md-card-title-text>
+		<md-card-title-media hide-xs>
+			<img class="card-media md-media-lg" *ngIf="movie?.img" [src]="'app/img/' +  movie?.img">
+		</md-card-title-media>
+	</md-card-title>
+	<md-card-actions layout="row" layout-align="end center">
+		<button md-button class="md-warn" (click)="onCancel()">Cancel</button>
+		<button md-button class="md-primary" (click)="onSave()">Save Changes</button>
+	</md-card-actions>
+</md-card>

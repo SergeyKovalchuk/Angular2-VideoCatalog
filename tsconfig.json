@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "outDir": "./app"
+  },
+  "filesGlob": [
+    "./dev/**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ],
+  "files": [
+    "./dev/dev.component.ts",
+    "./dev/main.ts",
+    "./dev/movies/movie-details.component.ts",
+    "./dev/movies/movie-edit.component.ts",
+    "./dev/movies/movie-error-page.component.ts",
+    "./dev/movies/movies-list.component.ts",
+    "./dev/navigation/navigation.component.ts",
+    "./dev/shared/directives/auth-router-outlet.directive.ts",
+    "./dev/shared/interfaces/user.interface.ts",
+    "./dev/shared/pipes/string-to-date.pipe.ts",
+    "./dev/shared/services/auth.service.ts",
+    "./dev/shared/services/data.service.ts",
+    "./dev/start/start.component.ts",
+    "./dev/user/login.component.ts",
+    "./dev/user/registration.component.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

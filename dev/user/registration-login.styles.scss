@@ -1,0 +1,16 @@
+h2 {
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.error {
+  &.md-message {
+    color: #f44336;
+    font-size: 0.75rem;
+    line-height: 22px;
+  }
+}
+
+button {
+  margin-left: 0;
+}

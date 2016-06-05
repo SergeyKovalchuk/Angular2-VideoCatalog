@@ -1,0 +1,23 @@
+<md-sidenav-container layout="row" flex>
+	<md-sidenav name="left"  class="md-sidenav-left ">
+		<md-toolbar class="md-theme-indigo">
+			<div class="md-toolbar-tools">
+				<h>Course List</h>
+			</div>
+		</md-toolbar>
+		<md-list role="list">
+			<md-list-item md-ink role="listitem" *ngFor="#item of movies; #i = index"
+			              [ngClass]="{ active: selectedMovie == i }" (click)="onSelect(i, item.slug)">
+				{{ item.title }}
+			</md-list-item>
+		</md-list>
+	</md-sidenav>
+	<md-content flex-gt-lg="50" flex-offset-gt-lg="25" layout="column" layout-padding>
+		<div layout="column" layout-fill>
+			<button md-raised-button (click)="open()" class="md-primary">
+				Open Course-List
+			</button>
+			<auth-router-outlet></auth-router-outlet>
+		</div>
+	</md-content>
+</md-sidenav-container>
