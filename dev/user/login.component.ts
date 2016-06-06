@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit():any {
         let error = this._authService.onError().subscribe((error) => this.error = error);
-        let success = this._authService.getLoggedInEvent().subscribe( () => this._router.navigate(['MoviesList']) );
+        let success = this._authService.getLoggedInEvent().subscribe( () => this._router.navigate(['CourseList']) );
 
         this.userForm = this._fb.group({
             email: ['', Validators.compose([

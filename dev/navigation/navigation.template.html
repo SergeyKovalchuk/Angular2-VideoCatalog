@@ -2,7 +2,7 @@
 	<md-toolbar>
 		<div class="md-toolbar-tools">
 			<a *ngIf="!isAuth()" md-button [routerLink]="['Start']">Home</a>
-			<a *ngIf="!isAuth()" md-button [routerLink]="['Registration']">Register</a> <!-- //*ngIf="!isReg() &&  -->
+			<a *ngIf="!isAuth()" md-button [routerLink]="['Registration']">Register</a>
 			<a *ngIf="!isAuth()" md-button [routerLink]="['Login']">Login</a>
 			<span flex></span>
 			<button *ngIf="isAuth()" (click)="logout()" md-button class="md-icon-button" aria-label="Sign Out">

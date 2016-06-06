@@ -6,7 +6,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 
 export class DataService {
-    private _url = 'https://videocatalog-angular2.firebaseio.com/movies.json';
+    private _url = 'https://videocatalog-angular2.firebaseio.com/courses.json';
     private _token = localStorage.getItem('token') !== null ? '?auth=' + localStorage.getItem('token') : ''; // authentication for firebase
     dataChanged = new EventEmitter<any>();
 
@@ -17,14 +17,14 @@ export class DataService {
             .map(response => response.json());
     }
 
-    getSingleData(slug: any): Observable<any> {
-        const uri = 'https://videocatalog-angular2.firebaseio.com/movies/' + slug + '.json';
+    getSingleData(name: any): Observable<any> {
+        const uri = 'https://videocatalog-angular2.firebaseio.com/courses/' + name + '.json';
 
         return this._http.get(uri + this._token).map(response => response.json());
     }
 
-    updateData(slug: any, data: any): Observable<any> {
-        const uri = 'https://videocatalog-angular2.firebaseio.com/movies/' + slug + '.json';
+    updateData(name: any, data: any): Observable<any> {
+        const uri = 'https://videocatalog-angular2.firebaseio.com/courses/' + name + '.json';
         const body = JSON.stringify(data);
         const headers = new Headers();
 
@@ -32,8 +32,8 @@ export class DataService {
             .map(response => response.json(), this.dataChanged.emit('update'));
     }
 
-    deleteDataSet(slug: any): Observable<any> {
-        const uri = 'https://videocatalog-angular2.firebaseio.com/movies/' + slug + '.json';
+    deleteDataSet(name: any): Observable<any> {
+        const uri = 'https://videocatalog-angular2.firebaseio.com/courses/' + name + '.json';
 
         return this._http.delete(uri + this._token)
             .map(response => response.json(), this.dataChanged.emit('delete')

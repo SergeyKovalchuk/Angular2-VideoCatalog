@@ -103,6 +103,5 @@ gulp.task('cleanup', function () {
         .pipe(clean());
 });
 
-gulp.task('default', ['watch', 'copy-libs', 'build-ts', 'build-html', 'global-css', 'component-css',
- 'process-images']);
+gulp.task('default', ['watch', 'copy-libs', 'build-ts', 'build-html', 'global-css', 'component-css', 'process-images']);
 gulp.task('wipe', ['cleanup']);

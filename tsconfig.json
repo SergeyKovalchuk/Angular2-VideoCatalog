@@ -20,12 +20,13 @@
     "typings/main.d.ts"
   ],
   "files": [
-    "./dev/dev.component.ts",
+    "./dev/app.component.ts",
+    "./dev/courses/course-add.component.ts",
+    "./dev/courses/course-details.component.ts",
+    "./dev/courses/course-edit.component.ts",
+    "./dev/courses/course-error-page.component.ts",
+    "./dev/courses/course-list.component.ts",
     "./dev/main.ts",
-    "./dev/movies/movie-details.component.ts",
-    "./dev/movies/movie-edit.component.ts",
-    "./dev/movies/movie-error-page.component.ts",
-    "./dev/movies/movies-list.component.ts",
     "./dev/navigation/navigation.component.ts",
     "./dev/shared/directives/auth-router-outlet.directive.ts",
     "./dev/shared/interfaces/user.interface.ts",

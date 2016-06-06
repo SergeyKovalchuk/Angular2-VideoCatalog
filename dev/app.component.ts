@@ -17,10 +17,15 @@ import {CourseListComponent} from "./courses/course-list.component";
     template: `<navigation></navigation>
               <md-content flex class="content">
                 <auth-router-outlet></auth-router-outlet>
-              </md-content>`,
+              </md-content>
+              <footer> (c) Video Catalog 2016 </footer>`,
     styles: [
         `.content {
             padding: 5px 40px 0;
+        }
+        footer {
+            background-color: #3f51b5 !important;
+            color: white;
         }`
     ],
     directives: [ROUTER_DIRECTIVES, NavigationComponent, AuthRouterOutlet],
@@ -40,7 +45,7 @@ export class AppComponent implements OnInit {
     ngOnInit():any {
 
         if (this.isAuth()) {
-            this._router.navigate(['CourseList']);  //поменять
+            this._router.navigate(['CourseList']);
         }
 
         return this._authService.getLoggedOutEvent()
