@@ -1,0 +1,60 @@
+<md-card>
+	<md-card-title>
+		<md-card-title-text layout-padding>
+			<span class="md-headline">{{ course?.title }}</span>
+			<ul class="list-unstyled list-inline">
+				<li class="md-caption list-inline-item info">{{ course?.duration }} min <span class="delimiter">|</span></li>
+				<li class="list-inline-item">
+					<ul class="list-unstyled list-inline">
+						<li class="md-caption list-inline-item info" *ngFor="#topic of course?.topics; #last = last">
+							{{ topic }}<span *ngIf="!last">,</span> <span *ngIf="last" class="delimiter">|</span>
+						</li>
+					</ul>
+				</li>
+				<li class="list-inline-item">
+					<ul class="list-unstyled list-inline">
+						<li class="list-inline-item md-caption info" *ngFor="#place of course?.places; #last = last">
+							{{ place }}<span *ngIf="!last">,</span> <span *ngIf="last" class="delimiter">|</span>
+						</li>
+					</ul>
+				</li>
+				<li class="list-inline-item md-caption info">{{ course?.startdata }}</li>
+			</ul>
+			<ul class="list-unstyled list-inline">
+				<li class="list-inline-item md-caption info" *ngFor="#speaker of course?.speakers; #last = last">
+					{{ speaker }}<span *ngIf="!last">,</span>
+				</li>
+			</ul>
+			<p>
+				<span class="md-caption subtitle">Description:</span><br>
+				<span class="md-body-1">{{ course?.description }}</span>
+			</p>
+			<p>
+				<span class="md-caption subtitle">Comments:</span><br>
+				<span class="md-body-1">{{ course?.rate?.comments || 'There is no comments for this course' }}</span>
+			</p>
+			<md-card-actions layout="row" layout-align="end center">
+				<button md-button class="md-primary" (click)="onDelete()">Add Comment</button>
+			</md-card-actions>
+			<div class="rating">
+				<p class="md-caption subtitle">Rating:</p>
+				<div layout="row" layout-align="start center">
+					<p class="rating__image"></p>
+					<p class="rating__score subtitle">{{ course?.rate?.userMeter || 0 }} %</p>
+				</div>
+				<p class="rating__details md-caption subtitle">
+					<span>Average Rating:</span> {{ course?.rate?.rating || 0 }} |
+					<span>Reviews Counted:</span> {{ course?.rate?.reviews || 0 }}
+				</p>
+			</div>
+		</md-card-title-text>
+		<md-card-title-media hide-xs>
+			<img class="card-media md-media-lg" *ngIf="course?.img" [src]="'app/img/' +  course?.img">
+		</md-card-title-media>
+	</md-card-title>
+	<md-card-actions layout="row" layout-align="end center">
+		<button md-button class="md-primary" (click)="onDelete()">Add New Course</button>  <!-- //addcourse -->
+		<button md-button class="md-warn" (click)="onDelete()">Delete Course</button>
+		<button md-button class="md-primary" (click)="onSelectEdit()">Edit Course</button>
+	</md-card-actions>
+</md-card>

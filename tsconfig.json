@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "outDir": "./app"
+  },
+  "filesGlob": [
+    "./dev/**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ],
+  "files": [
+    "./dev/app.component.ts",
+    "./dev/courses/course-add.component.ts",
+    "./dev/courses/course-details.component.ts",
+    "./dev/courses/course-edit.component.ts",
+    "./dev/courses/course-error-page.component.ts",
+    "./dev/courses/course-list.component.ts",
+    "./dev/main.ts",
+    "./dev/navigation/navigation.component.ts",
+    "./dev/shared/directives/auth-router-outlet.directive.ts",
+    "./dev/shared/interfaces/user.interface.ts",
+    "./dev/shared/pipes/string-to-date.pipe.ts",
+    "./dev/shared/services/auth.service.ts",
+    "./dev/shared/services/data.service.ts",
+    "./dev/start/start.component.ts",
+    "./dev/user/login.component.ts",
+    "./dev/user/registration.component.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "courses" : {
+    "rolling-scopes-2016" : {
+      "_id" : {
+        "id" : "569190cc24de1e0ce2dfcd5a"
+      },
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "duration" : 780,
+      "imdb" : {
+        "id" : "tt0080684",
+        "rating" : 8.8,
+        "votes" : 739949
+      },
+      "img" : "rolling-scopes-2016.jpg",
+      "name" : "rolling-scopes-2016",
+      "places" : [ "K1/1", "K3V" ],
+      "speakers" : [ "Sergey", "Alex", "Ivan" ],
+      "startdata" : "10/06/2016",
+      "title" : "Rolling Scopes 2016",
+      "rate" : {
+        "comments" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "rating" : 8.9,
+        "reviews" : 87,
+        "userMeter" : 97,
+        "userRating" : 4.1,
+        "userReviews" : 1045537
+      },
+      "topics" : [ "JS", "LESS" ]
+    },
+    "rolling-scopes-2017" : {
+      "_id" : {
+        "id" : "569190cb24de1e0ce2dfcd51"
+      },
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "duration" : 320,
+      "imdb" : {
+        "id" : "tt0120891",
+        "rating" : 4.8,
+        "votes" : 124558
+      },
+      "img" : "rolling-scopes-2017.jpg",
+      "name" : "rolling-scopes-2017",
+      "places" : [ "online", "K3V" ],
+      "speakers" : [ "Oleg", "Pasha" ],
+      "startdata" : "20/10/2017",
+      "title" : "Wild Wild West",
+      "rate" : {
+        "comments" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "rating" : 4.1,
+        "reviews" : 130,
+        "userMeter" : 28,
+        "userRating" : 2.7,
+        "userReviews" : 463740
+      },
+      "topics" : [ ".NET", "Razor" ]
+    },
+      "summer-summit" : {
+        "_id" : {
+          "id" : "569190cc24de1e0ce2dfcd5a"
+        },
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "duration" : 130,
+        "imdb" : {
+          "id" : "tt0080684",
+          "rating" : 9.1,
+          "votes" : 73213949
+        },
+        "img" : "rolling-scopes-2016.jpg",
+        "name" : "summer-summit",
+        "places" : [ "K1/1", "K3V" ],
+        "speakers" : [ "Sergey", "Alex", "Ivan" ],
+        "startdata" : "10/06/2016",
+        "title" : "Summer Summit 2016",
+        "rate" : {
+          "comments" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rating" : 10,
+          "reviews" : 77,
+          "userMeter" : 99,
+          "userRating" : 9.1,
+          "userReviews" : 1045213537
+        },
+        "topics" : [ "React performance", "Angular2", "Drons" ]
+      }
+   }
+}

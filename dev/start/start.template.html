@@ -1,0 +1,24 @@
+<main layout="column">
+	<div></div>
+	<h1>Video Catalog</h1>
+	<h2>
+		Hello, dear user. Now u can save your best courses and informaion about it.
+		<br>
+		<span>
+			Technologies that used on this site: Angular2, TypeScript, Firebase, es6...
+		</span>
+		<br>
+			Thank u for using this site.
+		<br>
+		Before u can use this site, u must be:
+	</h2>
+	<h3>
+		<span *ngIf="!isAuth()" class="link" (click)="navigateTo(routes.register.component)">
+			{{ routes.register.text }}
+		</span>
+		<span *ngIf="!isAuth()">or</span>
+		<span *ngIf="!isAuth()" class="link" (click)="navigateTo(routes.signin.component)">
+			{{ routes.signin.text }}
+		</span>
+	</h3>
+</main>

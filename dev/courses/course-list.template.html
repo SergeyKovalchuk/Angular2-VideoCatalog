@@ -1,0 +1,46 @@
+<md-sidenav-container layout="row" flex>
+	<md-sidenav name="courseslist"  class="md-sidenav-left ">
+		<md-toolbar class="md-theme-indigo">
+			<div class="md-toolbar-tools">
+				<h>Course List</h>
+			</div>
+		</md-toolbar>
+		<md-list role="list">
+			<md-input-container class="md-block">
+				<label for="password">Course</label>
+				<input md-input>
+			</md-input-container>
+			<md-list-item md-ink role="listitem" *ngFor="#item of courses; #i = index"
+			              [ngClass]="{ active: selectedCourse == i }" (click)="onSelect(i, item.name)">
+				{{ item.title }}
+			</md-list-item>
+		</md-list>
+	</md-sidenav>
+	<md-sidenav name="courseadd"  class="md-sidenav-right">
+		<md-toolbar class="md-theme-indigo">
+			<div class="md-toolbar-tools">
+				<h>Course Add</h>
+			</div>
+		</md-toolbar>
+		<md-list role="list">
+			<md-input-container class="md-block">
+				<label for="password">Course</label>
+				<input md-input>
+				<button md-raised-button class="md-primary">
+					Add Course
+				</button>
+			</md-input-container>
+		</md-list>
+	</md-sidenav>
+	<md-content flex-gt-lg="50" flex-offset-gt-lg="25" layout="column" layout-padding>
+		<div layout="column" layout-fill>
+			<button md-raised-button (click)="open()" class="md-primary">
+				Open Course-List
+			</button>
+			<button md-raised-button (click)="openAdd()" class="md-primary">
+				Add New Course
+			</button>
+			<auth-router-outlet></auth-router-outlet>
+		</div>
+	</md-content>
+</md-sidenav-container>
