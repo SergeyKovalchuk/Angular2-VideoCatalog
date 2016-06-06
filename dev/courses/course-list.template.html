@@ -16,7 +16,7 @@
 			</md-list-item>
 		</md-list>
 	</md-sidenav>
-	<md-sidenav name="courseadd"  class="md-sidenav-right">
+	<md-sidenav name="courseadd"  class="md-sidenav-left">
 		<md-toolbar class="md-theme-indigo">
 			<div class="md-toolbar-tools">
 				<h>Course Add</h>
@@ -24,23 +24,32 @@
 		</md-toolbar>
 		<md-list role="list">
 			<md-input-container class="md-block">
-				<label for="password">Course</label>
+				<label for="password">Course Name</label>
 				<input md-input>
-				<button md-raised-button class="md-primary">
-					Add Course
-				</button>
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label for="password">Duration</label>
+				<input md-input>
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label for="password">Description</label>
+				<input md-input>
 			</md-input-container>
 		</md-list>
+		<button md-raised-button class="md-primary">
+			Add Course
+		</button>
 	</md-sidenav>
 	<md-content flex-gt-lg="50" flex-offset-gt-lg="25" layout="column" layout-padding>
 		<div layout="column" layout-fill>
 			<button md-raised-button (click)="open()" class="md-primary">
 				Open Course-List
 			</button>
+			<auth-router-outlet></auth-router-outlet>
 			<button md-raised-button (click)="openAdd()" class="md-primary">
 				Add New Course
 			</button>
-			<auth-router-outlet></auth-router-outlet>
+
 		</div>
 	</md-content>
 </md-sidenav-container>
