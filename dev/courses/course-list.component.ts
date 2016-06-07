@@ -9,6 +9,7 @@ import { MATERIAL_DIRECTIVES, SidenavService }  from "ng2-material/all";
 import { CourseEditComponent }                  from "./course-edit.component";
 import { CourseErrorPageComponent }             from "./course-error-page.component";
 
+
 @Component({
     selector: 'course-list',
     templateUrl: 'app/courses/course-list.template.html',
@@ -33,22 +34,6 @@ export class CourseListComponent implements OnInit {
 
     constructor(private _dataService: DataService, private _router: Router, public sidenav: SidenavService) {}
 
-    fetchCourses() {
-        this._dataService.getAllData().subscribe(
-            data => {
-                this.courses.length = 0;
-                for (var key in data) {
-                    if (data.hasOwnProperty(key)) {
-                        this.courses.push(data[key]);
-                    }
-                }
-                this._router.navigate(['CourseDetails', {name: this.courses[0].name}]);
-                return this.courses
-            },
-            error => console.log(error)
-        );
-    }
-
     filterCoursesByName(searchString) {
         this._dataService.getAllData().subscribe(
             data => {
@@ -58,7 +43,9 @@ export class CourseListComponent implements OnInit {
                         this.courses.push(data[key]);
                     }
                 }
-                this._router.navigate(['CourseDetails', {name: this.courses[0].name}]);
+                if (this.courses[0]) {
+                    this._router.navigate(['CourseDetails', {name: this.courses[0].name}]);
+                }
                 return this.courses
             },
             error => console.log(error)
@@ -81,10 +68,10 @@ export class CourseListComponent implements OnInit {
         this._dataService.dataChanged.subscribe(
             (event) =>  setTimeout(() => {
                 this.selectedCourse = 0;
-                this.fetchCourses();
+                this.filterCoursesByName('');
             }, 500)
         );
-        return this.fetchCourses();
+        return this.filterCoursesByName('');
     }
 
 

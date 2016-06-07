@@ -8,7 +8,7 @@
 		<md-list role="list">
 			<md-input-container class="md-block">
 				<label for="password">Course</label>
-				<input md-input #search (onkeyup)="onSearch(search.value)"> {{ search.value }}
+				<input md-input #search (keyup)="filterCoursesByName(search.value)"> {{ search.value }}
 			</md-input-container>
 			<md-list-item md-ink role="listitem" *ngFor="#item of courses; #i = index"
 			              [ngClass]="{ active: selectedCourse == i }" (click)="onSelect(i, item.name)">

@@ -80,6 +80,60 @@
           "userReviews" : 1045213537
         },
         "topics" : [ "React performance", "Angular2", "Drons" ]
-      }
+    },
+    "frontend-techtalk-10" : {
+      "_id" : {
+        "id" : "569190cc24de1e0ce2dfcd5a"
+      },
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "duration" : 780,
+      "imdb" : {
+        "id" : "tt0080684",
+        "rating" : 8.8,
+        "votes" : 739949
+      },
+      "img" : "rolling-scopes-2016.jpg",
+      "name" : "frontend-techtalk-10",
+      "places" : [ "K1/1", "K3V" ],
+      "speakers" : [ "Sergey", "Alex", "Ivan" ],
+      "startdata" : "10/06/2016",
+      "title" : "Frontend TechTalk 10",
+      "rate" : {
+        "comments" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "rating" : 8.9,
+        "reviews" : 87,
+        "userMeter" : 97,
+        "userRating" : 4.1,
+        "userReviews" : 1045537
+      },
+      "topics" : [ "JS", "LESS" ]
+  },
+  "frontend-techtalk-17" : {
+    "_id" : {
+      "id" : "569190cc24de1e0ce2dfcd5a"
+    },
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "duration" : 780,
+    "imdb" : {
+      "id" : "tt0080684",
+      "rating" : 8.8,
+      "votes" : 739949
+    },
+    "img" : "rolling-scopes-2016.jpg",
+    "name" : "frontend-techtalk-17",
+    "places" : [ "K1/1", "K3V" ],
+    "speakers" : [ "Sergey", "Alex", "Ivan" ],
+    "startdata" : "10/06/2016",
+    "title" : "Frontend TechTalk 17",
+    "rate" : {
+      "comments" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "rating" : 8.9,
+      "reviews" : 87,
+      "userMeter" : 97,
+      "userRating" : 4.1,
+      "userReviews" : 1045537
+    },
+    "topics" : [ "JS", "LESS" ]
+  }
    }
 }
