@@ -21,7 +21,6 @@
   ],
   "files": [
     "./dev/app.component.ts",
-    "./dev/courses/course-add.component.ts",
     "./dev/courses/course-details.component.ts",
     "./dev/courses/course-edit.component.ts",
     "./dev/courses/course-error-page.component.ts",

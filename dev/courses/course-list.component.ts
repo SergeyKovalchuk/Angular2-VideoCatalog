@@ -29,6 +29,7 @@ import { CourseErrorPageComponent }             from "./course-error-page.compon
 export class CourseListComponent implements OnInit {
     courses: any = [];
     selectedCourse: any;
+    searchString: string;
 
     constructor(private _dataService: DataService, private _router: Router, public sidenav: SidenavService) {}
 
@@ -48,6 +49,33 @@ export class CourseListComponent implements OnInit {
         );
     }
 
+    filterCoursesByName(searchString) {
+        this._dataService.getAllData().subscribe(
+            data => {
+                this.courses.length = 0;
+                for (var key in data) {
+                    if (data.hasOwnProperty(key) && key.indexOf(searchString) > -1) {
+                        this.courses.push(data[key]);
+                    }
+                }
+                this._router.navigate(['CourseDetails', {name: this.courses[0].name}]);
+                return this.courses
+            },
+            error => console.log(error)
+        );
+    }
+
+    onSearch(searchString) {
+        this.selectedCourse = 0;
+        this._dataService.dataChanged.subscribe(
+            (event) =>  setTimeout(() => {
+                this.selectedCourse = 0;
+                this.filterCoursesByName(searchString);
+            }, 500)
+        );
+        return this.filterCoursesByName(searchString);
+    }
+
     ngOnInit():any {
         this.selectedCourse = 0;
         this._dataService.dataChanged.subscribe(
@@ -58,6 +86,7 @@ export class CourseListComponent implements OnInit {
         );
         return this.fetchCourses();
     }
+
 
     open() {
         this.sidenav.show('courseslist');
