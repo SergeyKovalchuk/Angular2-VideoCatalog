@@ -28,6 +28,7 @@
     "./dev/main.ts",
     "./dev/navigation/navigation.component.ts",
     "./dev/shared/directives/auth-router-outlet.directive.ts",
+    "./dev/shared/interfaces/course.interface.ts",
     "./dev/shared/interfaces/user.interface.ts",
     "./dev/shared/pipes/string-to-date.pipe.ts",
     "./dev/shared/services/auth.service.ts",
